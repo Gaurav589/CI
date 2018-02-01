@@ -1,0 +1,24 @@
+ **EMR Terminologies**
+
+**Instance fleet :** 
+
+The collection of EC2 instances that host each node type is called either an instance fleet
+The instance fleets or uniform instance groups configuration is a choice you make when you create a cluster.
+It applies to all node types, and it can't be changed later.
+The instance fleets configuration offers the widest variety of provisioning options for EC2 instances. 
+Each node type has a single instance fleet, and the task instance fleet is optional. 
+For each instance fleet, you specify up to five instance types, which can be provisioned as On-Demand and Spot Instanc
+
+**Master Node :**
+The master node manages the cluster and typically runs master components of distributed applications.
+
+**Core Nodes :** 
+
+Core nodes are managed by the master node. 
+Core nodes run the Data Node daemon to coordinate data storage as part of the Hadoop Distributed File System (HDFS). 
+They also run the Task Tracker daemon and perform other parallel computation tasks on data that installed applications require.
+
+**Task Nodes :**
+
+Task nodes are optional. You can use them to add power to perform parallel computation tasks on data, 
+such as Hadoop MapReduce tasks and Spark executors.Task nodes don't run the Data Node daemon, nor do they store data in HDFS
