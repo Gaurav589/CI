@@ -1,0 +1,6 @@
+- - Classification: hdfs-site
+    Properties: {dfs.block.size: '268435456', dfs.replication: '2'}
+  - Classification: hive-site
+    Properties: {hive.execution.engine: mr}
+  - Classification: spark-defaults
+    Properties: {spark.executor.memory: 3G}
