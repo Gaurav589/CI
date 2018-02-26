@@ -1,0 +1,37 @@
+# This file contains information related to all the infrastructure of cluster which will be used to create EMR cluster
+- [sg-4047273f, sg-d74828a8]
+# Security group id of master and slave node
+- [subnet-fbf13282, subnet-3660827d]
+# Subnet ids where EMR instances will be deployed
+# Below is instance fleet configuration below instances will be used for
+- - InstanceFleetType: MASTER
+    InstanceTypeConfigs:
+    - EbsConfiguration:
+        EbsBlockDeviceConfigs:
+        - VolumeSpecification: {SizeInGB: 50, VolumeType: gp2}
+          VolumesPerInstance: 1
+        EbsOptimized: false
+      InstanceType: m1.large
+      WeightedCapacity: 1
+    Name: Master
+    TargetOnDemandCapacity: 1
+    TargetSpotCapacity: 0
+  - InstanceFleetType: CORE
+    InstanceTypeConfigs:
+    - EbsConfiguration:
+        EbsBlockDeviceConfigs:
+        - VolumeSpecification: {SizeInGB: 50, VolumeType: gp2}
+          VolumesPerInstance: 1
+        EbsOptimized: false
+      InstanceType: m1.medium
+      WeightedCapacity: 1
+    - EbsConfiguration:
+        EbsBlockDeviceConfigs:
+        - VolumeSpecification: {SizeInGB: 100, VolumeType: gp2}
+          VolumesPerInstance: 1
+        EbsOptimized: false
+      InstanceType: m1.large
+      WeightedCapacity: 1
+    Name: Core
+    TargetOnDemandCapacity: 2
+    TargetSpotCapacity: 0
