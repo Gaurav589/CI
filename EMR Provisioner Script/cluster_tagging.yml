@@ -1,0 +1,7 @@
+# This file contains tag information related to cluster you can add/edit tags based on your requirement
+# Please do not change order or remove Clustername,Product,Purpose,Service tags.
+- {Key: Clustername, Value: Default-Streaming-Cluster}
+- {Key: Product, Value: DATA-PLATFORM-STREAMING}
+- {Key: purpose, Value: POC}
+- {Key: service, Value: EMR}
+# Add your tags below

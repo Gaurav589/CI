@@ -1,0 +1,14 @@
+- - Classification: hdfs-site
+    Properties: {dfs.block.size: '268435456', dfs.replication: '2',dfs.namenode.handler.count: '100'}
+  - Classification: core-site
+    Properties: {io.file.buffer.size: '131072', fs.trash.interval: '1440'}
+  - Classification: hive-site
+    Properties: {
+        hive.execution.engine: mr,
+        javax.jdo.option.ConnectionURL: "jdbc:mysql://<database host url>:3306/hive?createDatabaseIfNotExist=true",
+        javax.jdo.option.ConnectionUserName: "<username>",
+        javax.jdo.option.ConnectionPassword: "<password>",
+        #hive.metastore.client.factory.class: "com.amazonaws.glue.catalog.metastore.AWSGlueDataCatalogHiveClientFactory"
+    }
+  - Classification: spark-defaults
+    Properties: {spark.executor.memory: 3G,spark.master: 'yarn',spark.eventLog.enabled: 'true'}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Connection/.idea/Connection.iml" filepath="$PROJECT_DIR$/../Connection/.idea/Connection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EMR-Streaming-Cluster-Provisioner.iml" filepath="$PROJECT_DIR$/.idea/EMR-Streaming-Cluster-Provisioner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../airflow-base/.idea/airflow-base.iml" filepath="$PROJECT_DIR$/../airflow-base/.idea/airflow-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../lookout-dw/.idea/lookout-dw.iml" filepath="$PROJECT_DIR$/../lookout-dw/.idea/lookout-dw.iml" />
+    </modules>
+  </component>
+</project>
